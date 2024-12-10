@@ -1,22 +1,43 @@
+---
+import { SEO } from "astro-seo";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>FatHub - FatChicken's Portfolio + FatBlog (Personal Blog)</title>
+
+    <meta name="author" content="FatChicken277" />
+    <meta name="publisher" content="FatChicken277" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="keywords"
+      content="FatHub, FatChicken, Portfolio, Blog, Personal Blog, Projects, Ideas, Thoughts, Web Development, Programming, Coding, Technology, Golang, DevOps"
+    />
+
+    <SEO
+      title="FatHub - FatChicken's Portfolio + FatBlog (Personal Blog)"
+      titleTemplate="%s :: FatChicken"
+      description=" FatHub is a personal blog and portfolio website of FatChicken. It is a place where FatChicken shares his thoughts, ideas, and projects."
+      canonical={Astro.url.toString()}
+    />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+
+  <body>
+    <slot />
+  </body><style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</html>
